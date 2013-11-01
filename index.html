@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Angular Js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+	<script src="maincontroller.js" type="text/javascript"></script>
+</head>
+<body> 
+	<div id="content" ng-app="AngularJsTutorial" ng-controller="MainController">
+
+		<!-- First Example -->
+		{{understand}}
+		<br /><br />
+
+		<!-- Second Example -->
+		<input type="text" ng-model="inputValue" />
+		{{inputValue}}
+		<br /><br />
+
+		<!-- Third Example -->
+		<select ng-model="selectedPerson" ng-options="obj.name for obj in people"></select>
+		<select ng-model="selectedGenre">
+			<option ng-repeat="label in people[selectedPerson.id].stuff">{{label}}</option>
+		</select>
+		<br /><br />
+	</div>
+</body>
+</html>
+
+    
